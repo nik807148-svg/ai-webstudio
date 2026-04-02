@@ -227,16 +227,21 @@
       var business = formData.get('business') || '';
       var message = formData.get('message') || '';
 
-      var text = '🚀 *Новая заявка с сайта AI Web Studio*\n\n'
-        + '👤 Имя: ' + name + '\n'
-        + '📱 Телефон/Telegram: ' + phone + '\n'
-        + '🏢 Бизнес: ' + (business || 'не указан') + '\n'
-        + '💬 Задача: ' + (message || 'не указана');
+      // Экранируем HTML-спецсимволы
+      function escapeHtml(str) {
+        return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+      }
+
+      var text = '🚀 <b>Новая заявка с сайта AI Web Studio</b>\n\n'
+        + '👤 Имя: ' + escapeHtml(name) + '\n'
+        + '📱 Телефон/Telegram: ' + escapeHtml(phone) + '\n'
+        + '🏢 Бизнес: ' + escapeHtml(business || 'не указан') + '\n'
+        + '💬 Задача: ' + escapeHtml(message || 'не указана');
 
       // Bot token and chat IDs for Telegram
       var BOT_TOKEN = '8601694694:AAE0UO5tGjZl_y3hnkvjL3HzVHCxAbtGlEk';
       var CHAT_ID_PERSONAL = '7692089613';
-      var CHAT_ID_GROUP = '@StudioWebAi'; // will work once bot is added to group
+      var CHAT_ID_GROUP = '@StudioWebAi';
 
       var submitBtn = form.querySelector('button[type="submit"]');
       submitBtn.disabled = true;
@@ -249,38 +254,18 @@
         body: JSON.stringify({
           chat_id: CHAT_ID_PERSONAL,
           text: text,
-          parse_mode: 'Markdown'
+          parse_mode: 'HTML'
         })
       });
 
-      // Send to group/channel @StudioWebAi
+      // Send to group/channel @StudioWebAi (бот должен быть админом канала)
       var sendGroup = fetch('https://api.telegram.org/bot' + BOT_TOKEN + '/sendMessage', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           chat_id: CHAT_ID_GROUP,
           text: text,
-          parse_mode: 'Markdown'
-        })
-      }).catch(function() {}); // don't fail if group not yet set up
-
-      // Send email copy via formsubmit.co (free, no signup)
-      var emailText = 'Новая заявка с сайта AI Web Studio\n\n'
-        + 'Имя: ' + name + '\n'
-        + 'Телефон/Telegram: ' + phone + '\n'
-        + 'Бизнес: ' + (business || 'не указан') + '\n'
-        + 'Задача: ' + (message || 'не указана');
-
-      var sendEmail = fetch('https://formsubmit.co/ajax/luxalex405@gmail.com', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify({
-          name: name,
-          phone: phone,
-          business: business || 'не указан',
-          message: message || 'не указана',
-          _subject: '🚀 Новая заявка с AI Web Studio',
-          _template: 'table'
+          parse_mode: 'HTML'
         })
       }).catch(function() {});
 
