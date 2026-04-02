@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Web Studio — Сайты и AI-боты для бизнеса под ключ</title>
+  <meta name="description" content="AI Web Studio — создаём сайты, Telegram-ботов и AI-решения для бизнеса. Запуск за 3 дня, рост заявок от 40%. Пермь и вся Россия.">
+  <meta property="og:title" content="AI Web Studio — Сайты и AI-боты для бизнеса">
+  <meta property="og:description" content="Автоматизируем продажи и поддержку клиентов с помощью ИИ. Запуск за 3 дня.">
+  <style>
+    @font-face {
+      font-family: 'Orbitron';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url('./fonts/orbitron-400.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Orbitron';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url('./fonts/orbitron-700.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Orbitron';
+      font-style: normal;
+      font-weight: 900;
+      font-display: swap;
+      src: url('./fonts/orbitron-900.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url('./fonts/inter-400.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 600;
+      font-display: swap;
+      src: url('./fonts/inter-600.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url('./fonts/inter-700.woff2') format('woff2');
+    }
+  </style>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="#hero" class="header__logo">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-label="AI Web Studio">
+          <rect x="2" y="2" width="32" height="32" rx="8" stroke="currentColor" stroke-width="2"/>
+          <path d="M10 26L18 10L26 26" stroke="url(#logo-grad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="18" cy="20" r="3" fill="url(#logo-grad)"/>
+          <defs><linearGradient id="logo-grad" x1="10" y1="10" x2="26" y2="26"><stop stop-color="#6C63FF"/><stop offset="1" stop-color="#00D4FF"/></linearGradient></defs>
+        </svg>
+        <span>AI Web Studio</span>
+      </a>
+      <nav class="header__nav" id="nav">
+        <a href="#advantages">Возможности</a>
+        <a href="#how-it-works">Как работаем</a>
+        <a href="#cases">Кейсы</a>
+        <a href="#bots">AI-боты</a>
+        <a href="#pricing">Тарифы</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#contact" class="header__cta-btn">Оставить заявку</a>
+      </nav>
+      <button class="header__burger" id="burger" aria-label="Открыть меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== 1. HERO BANNER ===== -->
+    <section class="hero" id="hero">
+      <div class="hero__bg">
+        <img src="./assets/hero-banner.jpg" alt="AI Web Studio космический баннер" loading="eager">
+      </div>
+      <div class="hero__overlay"></div>
+      <div class="hero__content">
+        <h1 class="hero__title">
+          <span class="hero__title-main">AI WEB STUDIO</span>
+        </h1>
+        <p class="hero__subtitle">Больше клиентов. Меньше рутины. Быстрый запуск.</p>
+        <p class="hero__desc">Делаем сайты, Telegram-ботов и AI-автоматизацию для бизнеса.<br>Первый результат — за 3 дня. Работаем по всей России.</p>
+        <div class="hero__badges-row">
+          <div class="hero__mini-badge">
+            <span class="hero__mini-badge-num">3</span>
+            <span class="hero__mini-badge-text">дня до запуска</span>
+          </div>
+          <div class="hero__mini-badge">
+            <span class="hero__mini-badge-num">+40%</span>
+            <span class="hero__mini-badge-text">рост заявок</span>
+          </div>
+          <div class="hero__mini-badge">
+            <span class="hero__mini-badge-num">24/7</span>
+            <span class="hero__mini-badge-text">бот работает</span>
+          </div>
+        </div>
+        <div class="hero__buttons">
+          <a href="#contact" class="btn btn--primary btn--glow">Бесплатная консультация</a>
+          <a href="#cases" class="btn btn--outline">Смотреть кейсы</a>
+        </div>
+      </div>
+      <div class="hero__scroll-hint">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      </div>
+    </section>
+
+    <!-- ===== 2. ADVANTAGES + LEAD FORM ===== -->
+    <section class="advantages" id="advantages">
+      <div class="advantages__bg">
+        <img src="./assets/advantages-bg.jpg" alt="AI-технологии" loading="lazy">
+      </div>
+      <div class="advantages__overlay"></div>
+      <div class="advantages__content">
+        <div class="advantages__left">
+          <h2 class="section-title fade-in">Что мы делаем<br>для вашего бизнеса</h2>
+          <p class="section-subtitle fade-in">Не просто технологии — а конкретный результат в деньгах и заявках</p>
+          <div class="advantages__features">
+            <div class="feature-card feature-card--expandable fade-in" data-expand="expand-sites">
+              <div class="feature-card__icon">🌐</div>
+              <div class="feature-card__text">
+                <h3>Сайты на AI <span class="feature-card__arrow">›</span></h3>
+                <p>Продающие лендинги и корпоративные сайты с AI-элементами. Запуск за 1–3 дня.</p>
+              </div>
+            </div>
+            <div class="feature-expand" id="expand-sites">
+              <div class="feature-expand__inner">
+                <h4>Что входит в разработку сайта</h4>
+                <ul>
+                  <li><strong>Продающий лендинг</strong> — одностраничный сайт с формой заявки, анимациями и AI-чатом. Идеален для услуг, курсов, экспертов.</li>
+                  <li><strong>Корпоративный сайт</strong> — многостраничный сайт для компании: о нас, услуги, кейсы, контакты. Современный дизайн в стиле 2026 года.</li>
+                  <li><strong>Интернет-магазин</strong> — каталог товаров, корзина, оплата через ЮKassa. Telegram-бот для уведомлений о заказах.</li>
+                  <li><strong>AI-элементы</strong> — встроенный чат-бот, рекомендации товаров, автоматическая генерация контента.</li>
+                </ul>
+                <div class="feature-expand__stats">
+                  <span>⏱ Срок: 1–7 дней</span>
+                  <span>💰 От 15 000 ₽</span>
+                  <span>📱 Адаптив под мобильные</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="feature-card feature-card--expandable fade-in" data-expand="expand-bots">
+              <div class="feature-card__icon">🤖</div>
+              <div class="feature-card__text">
+                <h3>Telegram-боты <span class="feature-card__arrow">›</span></h3>
+                <p>Боты для продаж, записи на услуги, обработки заявок. Работают 24/7 вместо менеджера.</p>
+              </div>
+            </div>
+            <div class="feature-expand" id="expand-bots">
+              <div class="feature-expand__inner">
+                <h4>Возможности Telegram-бота</h4>
+                <ul>
+                  <li><strong>Бот-продавец</strong> — каталог товаров/услуг, корзина, оплата прямо в Telegram. Клиент покупает не выходя из мессенджера.</li>
+                  <li><strong>Бот-администратор</strong> — запись на услуги, выбор времени, автоматические напоминания за день и за час.</li>
+                  <li><strong>Бот-консультант</strong> — отвечает на частые вопросы, знает ваш прайс, рассказывает об услугах. Обучается на ваших данных.</li>
+                  <li><strong>Бот-воронка</strong> — прогревает клиента серией сообщений, выдаёт лид-магнит, ведёт до покупки.</li>
+                </ul>
+                <div class="feature-expand__stats">
+                  <span>⏱ Срок: 2–5 дней</span>
+                  <span>💰 От 15 000 ₽</span>
+                  <span>🔗 Интеграция с CRM и оплатой</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="feature-card feature-card--expandable fade-in" data-expand="expand-chat">
+              <div class="feature-card__icon">💬</div>
+              <div class="feature-card__text">
+                <h3>AI-чат на сайт <span class="feature-card__arrow">›</span></h3>
+                <p>Виджет поддержки с искусственным интеллектом. Отвечает мгновенно, знает ваш продукт.</p>
+              </div>
+            </div>
+            <div class="feature-expand" id="expand-chat">
+              <div class="feature-expand__inner">
+                <h4>Как работает AI-чат</h4>
+                <ul>
+                  <li><strong>Обучение на вашем контенте</strong> — загружаем информацию о продуктах, ценах, FAQ. Бот отвечает как менеджер, который знает всё.</li>
+                  <li><strong>Мгновенные ответы</strong> — клиент не ждёт 5 минут, а получает ответ за секунду. Конверсия растёт на 20–40%.</li>
+                  <li><strong>Сбор заявок</strong> — если вопрос сложный, бот берёт контакты и передаёт менеджеру. Ничего не теряется.</li>
+                  <li><strong>Аналитика</strong> — видите, что спрашивают клиенты, какие проблемы, где теряются. Данные для улучшения бизнеса.</li>
+                </ul>
+                <div class="feature-expand__stats">
+                  <span>⏱ Срок: 1–3 дня</span>
+                  <span>💰 От 10 000 ₽</span>
+                  <span>📊 Аналитика обращений</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="feature-card feature-card--expandable fade-in" data-expand="expand-auto">
+              <div class="feature-card__icon">⚡</div>
+              <div class="feature-card__text">
+                <h3>Автоматизация бизнеса <span class="feature-card__arrow">›</span></h3>
+                <p>Связываем CRM, мессенджеры, почту и платёжки в единую систему.</p>
+              </div>
+            </div>
+            <div class="feature-expand" id="expand-auto">
+              <div class="feature-expand__inner">
+                <h4>Что автоматизируем</h4>
+                <ul>
+                  <li><strong>Заявки → CRM</strong> — все обращения с сайта, Telegram, WhatsApp попадают в одну систему. Ни одна заявка не теряется.</li>
+                  <li><strong>Автоворонки</strong> — клиент оставил заявку → бот отправляет приветствие → менеджер получает уведомление → через день бот напоминает.</li>
+                  <li><strong>Оплата</strong> — подключаем ЮKassa, Robokassa, Тинькофф. Оплата в 1 клик из бота или с сайта.</li>
+                  <li><strong>Отчёты</strong> — автоматические отчёты по продажам, заявкам, конверсии в Telegram или на почту каждый день.</li>
+                </ul>
+                <div class="feature-expand__stats">
+                  <span>⏱ Срок: 3–7 дней</span>
+                  <span>💰 От 25 000 ₽</span>
+                  <span>🔄 ЮKassa, AmoCRM, Битрикс24</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="advantages__badges fade-in">
+            <div class="badge-item badge-item--expandable" data-expand="expand-individual">
+              <div class="badge-item__icon">🎯</div>
+              <h4>Индивидуально <span class="badge-item__arrow">›</span></h4>
+              <p>Решения под вашу нишу, не шаблоны</p>
+            </div>
+            <div class="badge-item badge-item--expandable" data-expand="expand-fast">
+              <div class="badge-item__icon">🚀</div>
+              <h4>Быстро <span class="badge-item__arrow">›</span></h4>
+              <p>Запуск от 1 до 7 рабочих дней</p>
+            </div>
+            <div class="badge-item badge-item--expandable" data-expand="expand-support">
+              <div class="badge-item__icon">🛡️</div>
+              <h4>С поддержкой <span class="badge-item__arrow">›</span></h4>
+              <p>Не бросаем после сдачи проекта</p>
+            </div>
+          </div>
+          <!-- Badge expand panels -->
+          <div class="badge-expand" id="expand-individual">
+            <div class="feature-expand__inner">
+              <h4>Почему мы не используем шаблоны</h4>
+              <ul>
+                <li><strong>Анализ вашей ниши</strong> — перед началом работы изучаем ваших конкурентов, целевую аудиторию и точки роста. Бот для автошколы и бот для салона красоты — это разные продукты.</li>
+                <li><strong>Уникальный дизайн</strong> — каждый сайт рисуется с нуля под ваш бренд. Не Tilda, не WordPress, а полностью кастомная разработка.</li>
+                <li><strong>Логика под ваш бизнес</strong> — бот знает ваши услуги, цены, график, акции. Отвечает как лучший сотрудник, который никогда не забывает прайс.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="badge-expand" id="expand-fast">
+            <div class="feature-expand__inner">
+              <h4>Почему так быстро</h4>
+              <ul>
+                <li><strong>AI-инструменты</strong> — используем искусственный интеллект на каждом этапе: дизайн, код, тексты. То, что раньше занимало 2 недели, делаем за 2–3 дня.</li>
+                <li><strong>Отлаженный процесс</strong> — за 50+ проектов мы выстроили чёткий конвейер: анализ → дизайн → разработка → запуск. Без затягивания.</li>
+                <li><strong>Промежуточные результаты</strong> — показываем, что готово, на каждом этапе. Вы видите прогресс и можете вносить правки сразу, а не после сдачи.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="badge-expand" id="expand-support">
+            <div class="feature-expand__inner">
+              <h4>Как устроена поддержка</h4>
+              <ul>
+                <li><strong>Гарантийный период</strong> — от 7 до 30 дней после запуска мы бесплатно исправляем любые ошибки, настраиваем, дорабатываем.</li>
+                <li><strong>Обучение</strong> — показываем, как управлять ботом и сайтом. Записываем видеоинструкцию, чтобы вы не зависели от нас.</li>
+                <li><strong>Оперативная связь</strong> — отвечаем в Telegram в течение 30 минут в рабочее время. Не тикеты, не очереди — прямой диалог с разработчиком.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="advantages__right">
+          <div class="lead-form fade-in" id="contact">
+            <h3 class="lead-form__title">Получите бесплатный аудит</h3>
+            <p class="lead-form__subtitle">Расскажем, как AI увеличит вашу прибыль. Ответим за 30 минут.</p>
+            <form id="leadForm" class="lead-form__form">
+              <input type="text" name="name" placeholder="Ваше имя" required>
+              <input type="tel" name="phone" placeholder="Телефон или Telegram" required>
+              <input type="text" name="business" placeholder="Ваш бизнес (ниша)">
+              <textarea name="message" placeholder="Какую задачу нужно решить?" rows="3"></textarea>
+              <button type="submit" class="btn btn--primary btn--glow btn--full">Отправить заявку</button>
+            </form>
+            <p class="lead-form__privacy">Нажимая кнопку, вы соглашаетесь на обработку персональных данных</p>
+            <div id="formSuccess" class="lead-form__success" style="display:none;">
+              <span>✅</span> Заявка отправлена! Свяжемся с вами в течение 30 минут.
+            </div>
+            <div id="formError" class="lead-form__error" style="display:none;">
+              <span>❌</span> Ошибка отправки. Напишите нам в <a href="https://t.me/StudioWebAi" target="_blank" rel="noopener noreferrer" style="color:#00D4FF;">Telegram</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 3. HOW IT WORKS ===== -->
+    <section class="how-it-works" id="how-it-works">
+      <div class="how-it-works__bg">
+        <img src="./assets/how-it-works-bg.jpg" alt="Процесс запуска AI-решения" loading="lazy">
+      </div>
+      <div class="how-it-works__overlay"></div>
+      <div class="how-it-works__content">
+        <h2 class="section-title fade-in">Как мы работаем</h2>
+        <p class="section-subtitle fade-in">От заявки до запуска — 4 простых шага</p>
+        <div class="steps">
+          <div class="step-card fade-in">
+            <div class="step-card__number">01</div>
+            <h3>Оставляете заявку</h3>
+            <p>Заполняете форму или пишете в Telegram. Отвечаем за 30 минут.</p>
+          </div>
+          <div class="step-arrow fade-in">
+            <svg width="40" height="24" viewBox="0 0 40 24" fill="none"><path d="M0 12h36M28 4l8 8-8 8" stroke="url(#arrow-g)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="arrow-g" x1="0" y1="12" x2="40" y2="12"><stop stop-color="#6C63FF"/><stop offset="1" stop-color="#00D4FF"/></linearGradient></defs></svg>
+          </div>
+          <div class="step-card fade-in">
+            <div class="step-card__number">02</div>
+            <h3>Бесплатный аудит</h3>
+            <p>Анализируем ваш бизнес, находим точки роста, предлагаем решение.</p>
+          </div>
+          <div class="step-arrow fade-in">
+            <svg width="40" height="24" viewBox="0 0 40 24" fill="none"><path d="M0 12h36M28 4l8 8-8 8" stroke="url(#arrow-g2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="arrow-g2" x1="0" y1="12" x2="40" y2="12"><stop stop-color="#6C63FF"/><stop offset="1" stop-color="#00D4FF"/></linearGradient></defs></svg>
+          </div>
+          <div class="step-card fade-in">
+            <div class="step-card__number">03</div>
+            <h3>Разработка</h3>
+            <p>Создаём сайт, бота или автоматизацию. Показываем промежуточные результаты.</p>
+          </div>
+          <div class="step-arrow fade-in">
+            <svg width="40" height="24" viewBox="0 0 40 24" fill="none"><path d="M0 12h36M28 4l8 8-8 8" stroke="url(#arrow-g3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="arrow-g3" x1="0" y1="12" x2="40" y2="12"><stop stop-color="#6C63FF"/><stop offset="1" stop-color="#00D4FF"/></linearGradient></defs></svg>
+          </div>
+          <div class="step-card fade-in">
+            <div class="step-card__number">04</div>
+            <h3>Запуск и поддержка</h3>
+            <p>Запускаем проект, обучаем вас, сопровождаем после сдачи.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 4. CASES ===== -->
+    <section class="cases" id="cases">
+      <div class="cases__inner">
+        <h2 class="section-title fade-in">Кейсы наших клиентов</h2>
+        <p class="section-subtitle fade-in">Нажмите на кейс — увидите полную историю проекта</p>
+        <div class="cases__grid">
+
+          <!-- CASE 1 -->
+          <div class="case-card case-card--clickable fade-in" data-case="case-modal-1">
+            <div class="case-card__glow"></div>
+            <div class="case-card__badge">Telegram-бот</div>
+            <h3>Бот для автошколы</h3>
+            <div class="case-card__stats">
+              <div class="case-card__stat">
+                <span class="case-card__stat-number" data-target="40">0</span><span class="case-card__stat-suffix">%</span>
+                <span class="case-card__stat-label">рост записей</span>
+              </div>
+            </div>
+            <p class="case-card__hint">Нажмите, чтобы узнать подробнее →</p>
+          </div>
+
+          <!-- CASE 2 -->
+          <div class="case-card case-card--clickable fade-in" data-case="case-modal-2">
+            <div class="case-card__glow"></div>
+            <div class="case-card__badge">Сайт + AI-чат</div>
+            <h3>Лендинг для юриста</h3>
+            <div class="case-card__stats">
+              <div class="case-card__stat">
+                <span class="case-card__stat-number" data-target="3">0</span><span class="case-card__stat-suffix">x</span>
+                <span class="case-card__stat-label">рост заявок</span>
+              </div>
+            </div>
+            <p class="case-card__hint">Нажмите, чтобы узнать подробнее →</p>
+          </div>
+
+          <!-- CASE 3 -->
+          <div class="case-card case-card--clickable fade-in" data-case="case-modal-3">
+            <div class="case-card__glow"></div>
+            <div class="case-card__badge">Автоматизация</div>
+            <h3>Интернет-магазин одежды</h3>
+            <div class="case-card__stats">
+              <div class="case-card__stat">
+                <span class="case-card__stat-number" data-target="70">0</span><span class="case-card__stat-suffix">%</span>
+                <span class="case-card__stat-label">экономия на персонале</span>
+              </div>
+            </div>
+            <p class="case-card__hint">Нажмите, чтобы узнать подробнее →</p>
+          </div>
+
+          <!-- CASE 4 -->
+          <div class="case-card case-card--clickable fade-in" data-case="case-modal-4">
+            <div class="case-card__glow"></div>
+            <div class="case-card__badge">Бот-воронка</div>
+            <h3>Онлайн-школа английского</h3>
+            <div class="case-card__stats">
+              <div class="case-card__stat">
+                <span class="case-card__stat-number" data-target="25">0</span><span class="case-card__stat-suffix">%</span>
+                <span class="case-card__stat-label">рост продаж курсов</span>
+              </div>
+            </div>
+            <p class="case-card__hint">Нажмите, чтобы узнать подробнее →</p>
+          </div>
+
+          <!-- CASE 5 -->
+          <div class="case-card case-card--clickable fade-in" data-case="case-modal-5">
+            <div class="case-card__glow"></div>
+            <div class="case-card__badge">Сайт + Бот + CRM</div>
+            <h3>Салон красоты</h3>
+            <div class="case-card__stats">
+              <div class="case-card__stat">
+                <span class="case-card__stat-number" data-target="50">0</span><span class="case-card__stat-suffix">%</span>
+                <span class="case-card__stat-label">меньше неявок</span>
+              </div>
+            </div>
+            <p class="case-card__hint">Нажмите, чтобы узнать подробнее →</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CASE MODALS ===== -->
+    <div class="case-modal-overlay" id="caseModalOverlay">
+      <div class="case-modal" id="caseModal">
+        <button class="case-modal__close" id="caseModalClose">&times;</button>
+        <div class="case-modal__body" id="caseModalBody"></div>
+      </div>
+    </div>
+
+    <!-- ===== 5. AI-BOTS ===== -->
+    <section class="bots" id="bots">
+      <div class="bots__inner">
+        <h2 class="section-title fade-in">AI-боты под ключ</h2>
+        <p class="section-subtitle fade-in">Цифровой сотрудник, который не устаёт, не болеет и не просит зарплату</p>
+        <div class="bots__grid">
+          <div class="bots__for fade-in">
+            <h3>Кому подходит</h3>
+            <ul>
+              <li class="bots__li--click" data-bot-tip="bot-tip-biz"><span class="bots__icon">🏢</span> Малый и средний бизнес <span class="bots__li-arrow">›</span></li>
+              <li class="bots__li--click" data-bot-tip="bot-tip-edu"><span class="bots__icon">🎓</span> Онлайн-школы и курсы <span class="bots__li-arrow">›</span></li>
+              <li class="bots__li--click" data-bot-tip="bot-tip-expert"><span class="bots__icon">👨‍💼</span> Эксперты, коучи, фрилансеры <span class="bots__li-arrow">›</span></li>
+              <li class="bots__li--click" data-bot-tip="bot-tip-shop"><span class="bots__icon">🛒</span> Интернет-магазины <span class="bots__li-arrow">›</span></li>
+              <li class="bots__li--click" data-bot-tip="bot-tip-beauty"><span class="bots__icon">🏥</span> Салоны, клиники, автосервисы <span class="bots__li-arrow">›</span></li>
+              <li class="bots__li--click" data-bot-tip="bot-tip-food"><span class="bots__icon">🍕</span> Доставка еды, рестораны <span class="bots__li-arrow">›</span></li>
+            </ul>
+          </div>
+          <div class="bots__abilities fade-in">
+            <h3>Что умеет бот</h3>
+            <ul>
+              <li class="bots__li--click" data-bot-tip="bot-tip-247"><span class="bots__check">✓</span> Отвечает клиентам 24/7 <span class="bots__li-arrow">›</span></li>
+              <li class="bots__li--click" data-bot-tip="bot-tip-crm"><span class="bots__check">✓</span> Принимает заявки → CRM <span class="bots__li-arrow">›</span></li>
+              <li class="bots__li--click" data-bot-tip="bot-tip-booking"><span class="bots__check">✓</span> Записывает на услуги <span class="bots__li-arrow">›</span></li>
+              <li class="bots__li--click" data-bot-tip="bot-tip-consult"><span class="bots__check">✓</span> Консультирует по продукту <span class="bots__li-arrow">›</span></li>
+              <li class="bots__li--click" data-bot-tip="bot-tip-pay"><span class="bots__check">✓</span> Принимает оплату <span class="bots__li-arrow">›</span></li>
+              <li class="bots__li--click" data-bot-tip="bot-tip-feedback"><span class="bots__check">✓</span> Собирает отзывы <span class="bots__li-arrow">›</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="bots__result fade-in">
+          <div class="bots__result-item bots__result-item--click" data-result-tip="result-tip-economy">
+            <span class="bots__result-icon">💰</span>
+            <p><strong>Экономия от 30 000 ₽/мес</strong> — бот заменяет одного менеджера</p>
+            <span class="bots__result-arrow">›</span>
+          </div>
+          <div class="bots__result-tip" id="result-tip-economy">
+            <p>💰 <strong>Как считаем экономию:</strong></p>
+            <p>Средняя зарплата менеджера поддержки в России — <strong>35 000–50 000 ₽/мес</strong> + налоги, отпуск, больничные. Бот закрывает 60–80% типовых обращений. Вместо 3 менеджеров нужен 1 — экономия <strong>60 000–100 000 ₽/мес</strong>. При этом бот не ошибается, не грубит, не уходит в отпуск.</p>
+          </div>
+
+          <div class="bots__result-item bots__result-item--click" data-result-tip="result-tip-conversion">
+            <span class="bots__result-icon">📈</span>
+            <p><strong>Рост конверсии до +40%</strong> — мгновенные ответы не дают клиенту уйти</p>
+            <span class="bots__result-arrow">›</span>
+          </div>
+          <div class="bots__result-tip" id="result-tip-conversion">
+            <p>📈 <strong>Почему растёт конверсия:</strong></p>
+            <p>По данным исследований, <strong>78% клиентов покупают у того, кто ответил первым</strong>. Если менеджер отвечает через 5 минут — клиент уже написал конкуренту. Бот отвечает за <strong>1–2 секунды</strong>. Плюс бот никогда не забывает перезвонить, отправить напоминание, дожать сделку.</p>
+          </div>
+
+          <div class="bots__result-item bots__result-item--click" data-result-tip="result-tip-sleep">
+            <span class="bots__result-icon">⏰</span>
+            <p><strong>Работает пока вы спите</strong> — ночь, выходные, праздники</p>
+            <span class="bots__result-arrow">›</span>
+          </div>
+          <div class="bots__result-tip" id="result-tip-sleep">
+            <p>⏰ <strong>Когда бот зарабатывает больше всего:</strong></p>
+            <p><strong>Вечер (18:00–23:00)</strong> — люди освободились с работы, ищут услуги, сравнивают цены. <strong>Выходные</strong> — пиковое время для записи в салоны, клиники, рестораны. <strong>Праздники</strong> — 8 марта, Новый год, 14 февраля — шквал заказов. Без бота все эти заявки теряются.</p>
+          </div>
+        </div>
+        <div class="bots__cta fade-in">
+          <a href="#contact" class="btn btn--primary btn--glow">Хочу бота для бизнеса</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 6. PRICING ===== -->
+    <section class="pricing" id="pricing">
+      <div class="pricing__inner">
+        <h2 class="section-title fade-in">Тарифы</h2>
+        <p class="section-subtitle fade-in">Прозрачные цены. Без скрытых доплат. Результат включён.</p>
+        <div class="pricing__grid">
+          <div class="pricing-card fade-in">
+            <div class="pricing-card__header">
+              <h3>Start</h3>
+              <div class="pricing-card__price">от 15 000 ₽</div>
+              <p class="pricing-card__desc">Быстрый старт для малого бизнеса</p>
+            </div>
+            <ul class="pricing-card__features">
+              <li><span>✓</span> Telegram-бот или лендинг</li>
+              <li><span>✓</span> 1 платформа (сайт или Telegram)</li>
+              <li><span>✓</span> Базовые сценарии ответов</li>
+              <li><span>✓</span> Запуск за 1–3 дня</li>
+              <li><span>✓</span> Техподдержка 7 дней</li>
+              <li class="disabled"><span>✗</span> Интеграция с CRM</li>
+              <li class="disabled"><span>✗</span> Приём оплаты</li>
+            </ul>
+            <a href="#contact" class="btn btn--outline btn--full">Выбрать Start</a>
+          </div>
+          <div class="pricing-card pricing-card--popular fade-in">
+            <div class="pricing-card__label">Выбирают 70% клиентов</div>
+            <div class="pricing-card__header">
+              <h3>Pro</h3>
+              <div class="pricing-card__price">от 35 000 ₽</div>
+              <p class="pricing-card__desc">Полноценная AI-система продаж</p>
+            </div>
+            <ul class="pricing-card__features">
+              <li><span>✓</span> Сайт + Telegram-бот</li>
+              <li><span>✓</span> До 3 платформ</li>
+              <li><span>✓</span> Продвинутые сценарии + AI</li>
+              <li><span>✓</span> Интеграция с CRM</li>
+              <li><span>✓</span> Приём оплаты (ЮKassa)</li>
+              <li><span>✓</span> Аналитика и отчёты</li>
+              <li><span>✓</span> Техподдержка 14 дней</li>
+            </ul>
+            <a href="#contact" class="btn btn--primary btn--glow btn--full">Выбрать Pro</a>
+          </div>
+          <div class="pricing-card fade-in">
+            <div class="pricing-card__header">
+              <h3>Business</h3>
+              <div class="pricing-card__price">от 70 000 ₽</div>
+              <p class="pricing-card__desc">Комплексная автоматизация</p>
+            </div>
+            <ul class="pricing-card__features">
+              <li><span>✓</span> Корпоративный сайт + боты</li>
+              <li><span>✓</span> Неограниченные платформы</li>
+              <li><span>✓</span> Полная AI-автоматизация</li>
+              <li><span>✓</span> Персональный менеджер</li>
+              <li><span>✓</span> Интеграция с любой системой</li>
+              <li><span>✓</span> Техподдержка 30 дней</li>
+              <li><span>✓</span> Приоритетная разработка</li>
+            </ul>
+            <a href="#contact" class="btn btn--outline btn--full">Выбрать Business</a>
+          </div>
+        </div>
+        <p class="pricing__note fade-in">Не знаете, какой тариф подходит? Напишите — подберём оптимальный вариант бесплатно.</p>
+      </div>
+    </section>
+
+    <!-- ===== 7. REVIEWS ===== -->
+    <section class="reviews" id="reviews">
+      <div class="reviews__inner">
+        <h2 class="section-title fade-in">Что говорят клиенты</h2>
+        <p class="section-subtitle fade-in">Реальные отзывы предпринимателей из России</p>
+        <div class="reviews__grid">
+          <div class="review-card fade-in">
+            <div class="review-card__stars">★★★★★</div>
+            <p class="review-card__text">"Заказали Telegram-бота для автошколы. Теперь записи идут сами, даже ночью. За первый месяц +40% к ученикам. Ребята реально разбираются."</p>
+            <div class="review-card__author">
+              <div class="review-card__avatar">А</div>
+              <div>
+                <strong>Алексей М.</strong>
+                <span>Автошкола, Пермь</span>
+              </div>
+            </div>
+          </div>
+          <div class="review-card fade-in">
+            <div class="review-card__stars">★★★★★</div>
+            <p class="review-card__text">"Попросила сделать сайт для онлайн-курсов. Готов был через 2 дня. Плюс AI-чат, который отвечает на вопросы учеников. Конверсия в покупку выросла в 3 раза."</p>
+            <div class="review-card__author">
+              <div class="review-card__avatar">М</div>
+              <div>
+                <strong>Марина К.</strong>
+                <span>Онлайн-школа, Екатеринбург</span>
+              </div>
+            </div>
+          </div>
+          <div class="review-card fade-in">
+            <div class="review-card__stars">★★★★★</div>
+            <p class="review-card__text">"У нас интернет-магазин, менеджеры тонули в одинаковых вопросах. Поставили AI-бота — он закрывает 80% обращений. Сэкономили на 2 ставках."</p>
+            <div class="review-card__author">
+              <div class="review-card__avatar">Д</div>
+              <div>
+                <strong>Дмитрий П.</strong>
+                <span>Интернет-магазин, Москва</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="reviews__stats fade-in">
+          <div class="stat-item">
+            <span class="stat-item__number" data-target="50">0</span><span class="stat-item__suffix">+</span>
+            <span class="stat-item__label">выполненных проектов</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-item__number" data-target="95">0</span><span class="stat-item__suffix">%</span>
+            <span class="stat-item__label">клиентов рекомендуют</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-item__number" data-target="3">0</span><span class="stat-item__suffix"> дня</span>
+            <span class="stat-item__label">средний срок запуска</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 8. FINAL CTA ===== -->
+    <section class="cta-final" id="cta-final">
+      <div class="cta-final__bg"></div>
+      <div class="cta-final__content fade-in">
+        <h2>Хватит терять клиентов.<br>Автоматизируйте продажи.</h2>
+        <p>Оставьте заявку — расскажем, как AI увеличит вашу прибыль уже на этой неделе. Консультация бесплатно.</p>
+        <div class="cta-final__buttons">
+          <a href="#contact" class="btn btn--primary btn--glow btn--lg">Получить бесплатный аудит</a>
+          <a href="https://t.me/StudioWebAi" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--lg">Написать в Telegram</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <span class="footer__logo">AI Web Studio</span>
+        <p>Сайты, боты и AI-решения для бизнеса</p>
+        <p class="footer__location">Пермь, Россия — работаем удалённо по всей стране</p>
+      </div>
+      <div class="footer__links">
+        <a href="#advantages">Возможности</a>
+        <a href="#cases">Кейсы</a>
+        <a href="#pricing">Тарифы</a>
+        <a href="#contact">Контакты</a>
+      </div>
+      <div class="footer__contacts">
+        <a href="https://t.me/StudioWebAi" target="_blank" rel="noopener noreferrer" class="footer__contact-link">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.9 8.1l-1.97 9.28c-.15.67-.54.83-1.09.52l-3.01-2.22-1.45 1.4c-.16.16-.3.3-.61.3l.22-3.06 5.53-5c.24-.21-.05-.33-.37-.13l-6.84 4.3-2.95-.92c-.64-.2-.65-.64.13-.95l11.53-4.45c.53-.2 1-.05.88.93z"/></svg>
+          Telegram
+        </a>
+        <a href="https://vk.ru/ai_studio_web" target="_blank" rel="noopener noreferrer" class="footer__contact-link">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.47 13.27c.48.47.99.92 1.42 1.44.19.23.37.48.48.76.15.4-.04.83-.39.86h-2.17c-.56.05-1-.18-1.39-.55-.31-.3-.59-.63-.89-.95-.12-.13-.25-.25-.4-.34-.3-.18-.56-.12-.72.2-.17.33-.21.7-.23 1.06-.03.52-.18.65-.7.68-1.12.06-2.17-.1-3.14-.64-1.15-.64-2.03-1.55-2.8-2.59C5.17 11.03 4.2 9.41 3.39 7.7c-.18-.38-.05-.58.37-.59.71-.02 1.43-.02 2.14 0 .27 0 .44.16.55.41.39.88.86 1.71 1.43 2.49.15.21.31.43.53.57.24.16.42.1.53-.17.07-.17.1-.36.12-.55.06-.6.07-1.2-.03-1.8-.06-.38-.26-.63-.63-.71-.19-.04-.16-.13-.07-.22.16-.16.31-.26.6-.26h2.45c.39.07.47.25.52.63l.02 2.7c0 .15.07.58.34.68.21.07.35-.1.48-.24.56-.61.97-1.32 1.33-2.06.16-.33.3-.67.42-1.02.09-.25.23-.38.5-.37l2.36.02c.07 0 .14 0 .21.02.39.07.5.24.39.63-.18.6-.54 1.1-.92 1.58-.41.52-.84 1.02-1.24 1.54-.13.17-.12.35.03.53z"/></svg>
+          VK
+        </a>
+        <a href="mailto:luxalex405@gmail.com" class="footer__contact-link">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
+          luxalex405@gmail.com
+        </a>
+      </div>
+      <div class="footer__copy">
+        &copy; 2026 AI Web Studio. Все права защищены.
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== FLOATING TELEGRAM WIDGET ===== -->
+  <div class="tg-widget" id="tgWidget">
+    <div class="tg-widget__popup" id="tgPopup">
+      <div class="tg-widget__header">
+        <span>🤖 AI-помощник</span>
+        <button class="tg-widget__close" id="tgPopupClose">&times;</button>
+      </div>
+      <div class="tg-widget__body">
+        <p>Нужен бот, сайт или VPN?</p>
+        <a href="https://t.me/StudioWebAi" target="_blank" rel="noopener noreferrer" class="tg-widget__btn tg-widget__btn--primary">🌐 AI Web Studio</a>
+        <a href="https://t.me/VpnChilBot" target="_blank" rel="noopener noreferrer" class="tg-widget__btn tg-widget__btn--vpn">🔒 VPN-сервис</a>
+      </div>
+    </div>
+    <button class="tg-widget__fab" id="tgFab" aria-label="Открыть Telegram">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="#fff"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.9 8.1l-1.97 9.28c-.15.67-.54.83-1.09.52l-3.01-2.22-1.45 1.4c-.16.16-.3.3-.61.3l.22-3.06 5.53-5c.24-.21-.05-.33-.37-.13l-6.84 4.3-2.95-.92c-.64-.2-.65-.64.13-.95l11.53-4.45c.53-.2 1-.05.88.93z"/></svg>
+    </button>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
